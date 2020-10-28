@@ -1,9 +1,13 @@
-# yangPENTINGLulus
+<h1 align="center"> DC EMS </h1>
+<p align="center">Reinventing Daca Center Monitoring System</p>
 
-## Ketua
+## Made by
+yangPentingLulus Team :
+
+#### Ketua
 - Jerry Lasama
 
-## Anggota
+#### Anggota
 - Jenal Abidin
 - Shine la yan senpa pisue
 - Rio Darmawan
