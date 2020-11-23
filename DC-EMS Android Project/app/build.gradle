@@ -7,7 +7,7 @@ android {
     buildToolsVersion "30.0.2"
 
     defaultConfig {
-        applicationId "com.DCEMS.hello_world"
+        applicationId "com.yangPentingLulus.DCEMS"
         minSdkVersion 21
         targetSdkVersion 30
         versionCode 1

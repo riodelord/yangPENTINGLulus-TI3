@@ -1,4 +1,4 @@
-package com.DCEMS.hello_world
+package com.yangPentingLulus.DCEMS
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
