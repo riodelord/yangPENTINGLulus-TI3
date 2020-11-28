@@ -5,4 +5,18 @@
     <string name="title_dashboard">Dashboard</string>
     <string name="title_utilities">Utilities</string>
     <string name="title_alarms">Alarms</string>
+
+    <string-array name="data_name">
+        <item>RAK 1</item>
+        <item>RAK 2</item>
+        <item>RAK 3</item>
+        <item>RAK 4</item>
+    </string-array>
+    <string-array name="data_description">
+        <item>RAK 1 ini</item>
+        <item>RAK 2 ini</item>
+        <item>RAK 3 ini</item>
+        <item>RAK 4 ini</item>
+    </string-array>
+
 </resources>
