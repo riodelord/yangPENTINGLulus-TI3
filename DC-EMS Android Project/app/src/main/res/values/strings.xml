@@ -5,6 +5,7 @@
     <string name="title_dashboard">Dashboard</string>
     <string name="title_utilities">Utilities</string>
     <string name="title_alarms">Alarms</string>
+    <string name="today_kwh_title">Today\'s kWH</string>
 
     <string-array name="data_name">
         <item>RAK 1</item>
