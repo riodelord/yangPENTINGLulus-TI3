@@ -8,11 +8,12 @@
 
 
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="353dp"
-        android:layout_height="match_parent"
+        android:id="@+id/welcome_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginTop="35dp"
         android:layout_marginBottom="8dp"
+        android:layout_marginHorizontal="16dp"
         android:text="Welcome back !"
         android:textStyle="bold"
         android:textSize="48sp"
@@ -26,104 +27,89 @@
         app:layout_constraintVertical_bias="0.039" />
 
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="353dp"
+        android:id="@+id/login_label"
+        android:layout_width="match_parent"
         android:textColor="@color/cardview_dark_background"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:layout_marginBottom="8dp"
+        android:layout_marginHorizontal="16dp"
         android:text="Login"
         android:textStyle="bold"
         android:textSize="35sp"
         app:fontFamily="sans-serif"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.448"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.194"
+        app:layout_constraintTop_toBottomOf="@+id/welcome_label"
         tools:ignore="DuplicateIds" />
 
-    <TextView
-        android:id="@+id/tampil_email"
-        android:layout_width="353dp"
-        android:layout_height="38dp"
+    <LinearLayout
+        android:id="@+id/login_form_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginHorizontal="24dp"
         android:layout_marginTop="16dp"
-        android:text="Email"
-        android:textSize="25sp"
-        app:fontFamily="sans-serif"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintHorizontal_bias="0.448"
-        app:layout_constraintVertical_bias="0.347"
-        tools:ignore="DuplicateIds" />
+        app:layout_constraintTop_toBottomOf="@id/login_label">
+        <TextView
+            android:id="@+id/email_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Email"
+            android:textSize="25sp"
+            app:fontFamily="sans-serif" />
 
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/email_field"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/inputEmail"
+            android:layout_marginTop="8dp"
+            app:startIconDrawable="@drawable/ic_baseline_email_24">
 
-    <TextView
-        android:id="@+id/tampil_password"
-        android:layout_width="353dp"
-        android:layout_height="38dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="8dp"
-        android:text="Password"
-        android:textSize="25sp"
-        app:fontFamily="sans-serif"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.448"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.497"
-        tools:ignore="DuplicateIds" />
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                />
 
-    <EditText
-        android:id="@+id/inputEmail"
-        android:layout_width="353dp"
-        android:layout_height="45dp"
-        android:textSize="25sp"
-        android:background="@drawable/border"
-        android:ems="10"
-        android:hint="@string/inputEmail"
-        android:inputType="textEmailAddress"
-        android:padding="@dimen/_5sdp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintHorizontal_bias="0.448"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.428" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-    <EditText
-        android:id="@+id/inputPassword"
-        android:layout_width="353dp"
-        android:layout_height="45dp"
-        android:textSize="25sp"
-        android:background="@drawable/border"
-        android:ems="10"
-        android:hint="@string/inputPassword"
-        android:padding="@dimen/_5sdp"
-        android:inputType="textPassword"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.448"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.558" />
+        <TextView
+            android:id="@+id/password_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Password"
+            android:textSize="25sp"
+            app:fontFamily="sans-serif" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/password_field"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/inputPassword"
+            android:layout_marginTop="8dp"
+            app:endIconMode="password_toggle"
+            app:startIconDrawable="@drawable/ic_baseline_lock_24">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+    </LinearLayout>
 
 
     <Button
         android:id="@+id/btnLogin"
-        android:layout_width="353dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="120dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="72dp"
+        android:layout_marginHorizontal="24dp"
         android:text="@string/button_login"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.448"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/inputEmail"
-        app:layout_constraintVertical_bias="0.062" />
+        app:layout_constraintTop_toBottomOf="@+id/login_form_layout"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

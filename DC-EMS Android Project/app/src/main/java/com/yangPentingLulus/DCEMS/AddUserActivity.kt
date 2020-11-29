@@ -7,8 +7,6 @@ import android.util.Log
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_add_user.*
 import kotlinx.android.synthetic.main.activity_login.*
-import kotlinx.android.synthetic.main.activity_login.inputEmail
-import kotlinx.android.synthetic.main.activity_login.inputPassword
 
 class AddUserActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

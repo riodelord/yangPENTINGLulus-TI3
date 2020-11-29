@@ -16,14 +16,14 @@ class LoginActivity : AppCompatActivity() {
             Toast.makeText(applicationContext,msg, Toast. LENGTH_SHORT).show()
         }
         btnLogin.setOnClickListener{
-            val emailUser = inputEmail.text.toString()
-            val passwordUser = inputPassword.text.toString()
+            val emailUser = email_field.editText?.text.toString()
+            val passwordUser = password_field.editText?.text.toString()
             if (emailUser.isEmpty()) {
-                inputEmail.error = "Email Tidak Boleh Kosong"
+                email_field.error = "Email Tidak Boleh Kosong"
                 return@setOnClickListener
             }
             if (passwordUser.isEmpty()) {
-                inputPassword.error = "Password Tidak Boleh Kosong"
+                password_field.error = "Password Tidak Boleh Kosong"
                 return@setOnClickListener
             }
             if(emailUser=="admin@gmail.com" && passwordUser=="admin"){
