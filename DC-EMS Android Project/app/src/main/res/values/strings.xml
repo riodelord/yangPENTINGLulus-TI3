@@ -5,6 +5,15 @@
     <string name="title_dashboard">Dashboard</string>
     <string name="title_utilities">Utilities</string>
     <string name="title_alarms">Alarms</string>
+    <string name="inputEmail">Input Email</string>
+    <string name="inputPassword">Input Password</string>
+    <string name="button_login">Log In</string>
+    <string name="inputUsername">username</string>
+    <string name="button_Cancel">Cancel</string>
+    <string name="button_Add">Add</string>
+    <string name="button_exit">X</string>
+    <string name="Save">Save</string>
+    <string name="button_AddUser">Add User</string>
     <string name="today_kwh_title">Today\'s kWH</string>
     <string name="today_bill_title">Today\'s Bill</string>
     <string name="today_kwh_placeholder">932 kW</string>
