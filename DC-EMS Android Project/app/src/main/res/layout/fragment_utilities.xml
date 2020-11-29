@@ -31,14 +31,17 @@
     <LinearLayout
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
-        android:layout_margin="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginHorizontal="24dp"
         android:id="@+id/today_report_card"
-        app:layout_constraintTop_toBottomOf="@+id/utilities_title">
+        app:layout_constraintTop_toBottomOf="@+id/utilities_title"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
 
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/today_kwh_card"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_margin="8dp"
             >
 
@@ -64,7 +67,7 @@
                     android:paddingVertical="4dp"
                     android:paddingHorizontal="16dp"
                     android:textStyle="bold"
-                    android:textAppearance="?attr/textAppearanceHeadline4" />
+                    android:textAppearance="?attr/textAppearanceHeadline5" />
 
 
                 <!-- Buttons -->
@@ -76,7 +79,7 @@
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/today_bill_card"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_margin="8dp"
             >
 
@@ -102,7 +105,7 @@
                     android:paddingVertical="4dp"
                     android:paddingHorizontal="16dp"
                     android:textStyle="bold"
-                    android:textAppearance="?attr/textAppearanceHeadline4" />
+                    android:textAppearance="?attr/textAppearanceHeadline5" />
 
 
                 <!-- Buttons -->
@@ -113,15 +116,32 @@
 
     </LinearLayout>
 
-    <!-- Setting height to wrap_content yield to a rendering error -->
-    <com.github.aachartmodel.aainfographics.aachartcreator.AAChartView
-        android:id="@+id/today_kwh_chart"
+    <LinearLayout
+        android:id="@+id/historical_report"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:minHeight="300dp"
+        android:orientation="vertical"
+        android:layout_marginTop="16dp"
+        android:layout_marginHorizontal="24dp"
         app:layout_constraintTop_toBottomOf="@+id/today_report_card">
 
-    </com.github.aachartmodel.aainfographics.aachartcreator.AAChartView>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/historical_kwh_label"
+            android:textSize="25sp"
+            android:textAppearance="?attr/textAppearanceSubtitle2" />
+
+        <!-- Setting height to wrap_content yield to a rendering error -->
+        <com.github.aachartmodel.aainfographics.aachartcreator.AAChartView
+            android:id="@+id/today_kwh_chart"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_marginTop="16dp">
+
+        </com.github.aachartmodel.aainfographics.aachartcreator.AAChartView>
+
+    </LinearLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -17,7 +17,8 @@
     <string name="today_kwh_title">Today\'s kWH</string>
     <string name="today_bill_title">Today\'s Bill</string>
     <string name="today_kwh_placeholder">932 kW</string>
-    <string name="today_bill_placeholder">2.800.000</string>
+    <string name="today_bill_placeholder">Rp 2.8 JT</string>
+    <string name="historical_kwh_label">Past kWH Data</string>
 
     <string-array name="data_name">
         <item>RAK 1</item>
