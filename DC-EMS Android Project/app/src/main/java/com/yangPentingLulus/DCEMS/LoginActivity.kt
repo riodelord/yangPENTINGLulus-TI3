@@ -20,7 +20,7 @@ class LoginActivity : AppCompatActivity() {
                 inputPassword.error = "Password Tidak Boleh Kosong"
                 return@setOnClickListener
             }
-            val moveWithDataIntent = Intent(this@LoginActivity, AddUserActivity::class.java)
+            val moveWithDataIntent = Intent(this@LoginActivity, MainActivity::class.java)
             startActivity(moveWithDataIntent)
         }
     }

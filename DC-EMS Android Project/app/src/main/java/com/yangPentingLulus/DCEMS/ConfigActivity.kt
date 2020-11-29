@@ -14,5 +14,9 @@ class ConfigActivity : AppCompatActivity() {
             val moveWithDataIntent = Intent(this@ConfigActivity, AddUserActivity::class.java)
             startActivity(moveWithDataIntent)
         }
+        btnBack.setOnClickListener{
+            val moveWithDataIntent = Intent(this@ConfigActivity, MainActivity::class.java)
+            startActivity(moveWithDataIntent)
+        }
     }
 }
