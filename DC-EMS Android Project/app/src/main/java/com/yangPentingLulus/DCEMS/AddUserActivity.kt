@@ -14,10 +14,14 @@ class AddUserActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_add_user)
+        fun printState(msg: String){
+            Log.d("ActivityState",msg)
+            Toast.makeText(applicationContext,msg, Toast. LENGTH_SHORT).show()
+        }
         btnAdd.setOnClickListener{
             val usernameUser = inputUsername.text.toString()
             val emailUser = inputPassword.text.toString()
-            val PasswordUser = inputEmail.text.toString()
+            val passwordUser = inputEmail.text.toString()
             if (usernameUser.isEmpty()) {
                 inputUsername.error = "Username Tidak Boleh Kosong"
                 return@setOnClickListener
@@ -26,13 +30,16 @@ class AddUserActivity : AppCompatActivity() {
                 inputEmail.error = "Email Tidak Boleh Kosong"
                 return@setOnClickListener
             }
-            if (PasswordUser.isEmpty()) {
+            if (passwordUser.isEmpty()) {
                 inputPassword.error = "Password Tidak Boleh Kosong"
                 return@setOnClickListener
             }
-            fun printState(msg: String){
-                Log.d("ActivityState",msg)
-                Toast.makeText(applicationContext,msg, Toast. LENGTH_SHORT).show()
+            if(usernameUser=="admin" && emailUser=="admin@gmail.com") {
+                fun printState(msg: String) {
+                    Log.d("ActivityState", msg)
+                    Toast.makeText(applicationContext, msg, Toast.LENGTH_SHORT).show()
+                    printState("User/Email sudah terdaftar")
+                }
             }
             printState("User Berhasil Ditambahkan")
             val moveWithDataIntent = Intent(this@AddUserActivity, LoginActivity::class.java)
