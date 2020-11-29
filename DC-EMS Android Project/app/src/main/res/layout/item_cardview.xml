@@ -15,7 +15,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="wrap_content"
         android:padding="8dp">
 
         <TextView
@@ -33,12 +33,15 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:orientation="horizontal"
+            android:gravity="center"
             app:layout_constraintTop_toBottomOf="@+id/tv_item_name">
 
             <LinearLayout
                 android:id="@+id/temperature_label"
-                android:layout_width="92dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:paddingHorizontal="8dp"
+                android:gravity="center"
                 android:orientation="vertical">
 
                 <TextView
@@ -50,27 +53,27 @@
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="20dp"
                     android:layout_marginTop="4dp"
                     android:src="@drawable/ic_temperature" />
+
                 <TextView
                     android:id="@+id/tv_item_temperature"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textSize="20sp"
                     android:textStyle="bold"
-                    tools:text="mydata_temperature"
-                    android:layout_marginLeft="10dp"/>
+                    tools:text="mydata_temperature" />
 
             </LinearLayout>
 
 
 <LinearLayout
                 android:id="@+id/humidity_label"
-                android:layout_width="92dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="30dp"
                 android:orientation="vertical"
+                android:layout_marginHorizontal="8dp"
                 app:layout_constraintEnd_toStartOf="@+id/status_label"
                 app:layout_constraintStart_toEndOf="@+id/temperature_label">
 
@@ -84,7 +87,7 @@
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="3dp"
+        android:layout_marginHorizontal="4dp"
         android:layout_marginTop="4dp"
         android:src="@drawable/ic_humidity" />
     <TextView
@@ -101,7 +104,7 @@
 </LinearLayout>
             <LinearLayout
                 android:id="@+id/status_label"
-                android:layout_width="92dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="30dp"
                 android:orientation="vertical"
