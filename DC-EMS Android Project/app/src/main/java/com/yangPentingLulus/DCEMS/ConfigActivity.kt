@@ -10,12 +10,17 @@ class ConfigActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_config)
-        btnAddUser.setOnClickListener{
-            val moveWithDataIntent = Intent(this@ConfigActivity, AddUserActivity::class.java)
-            startActivity(moveWithDataIntent)
-        }
         btnBack.setOnClickListener{
             val moveWithDataIntent = Intent(this@ConfigActivity, MainActivity::class.java)
+            startActivity(moveWithDataIntent)
+        }
+        btnSave.setOnClickListener{
+            val moveWithDataIntent = Intent(this@ConfigActivity, ConfigActivity::class.java)
+            startActivity(moveWithDataIntent)
+
+        }
+        btnAddUser.setOnClickListener{
+            val moveWithDataIntent = Intent(this@ConfigActivity, AddUserActivity::class.java)
             startActivity(moveWithDataIntent)
         }
     }
