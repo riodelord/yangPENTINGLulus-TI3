@@ -40,12 +40,16 @@ class DashboardFragment : Fragment() {
 
     fun getListMyDatas(): ArrayList<MyData> {
         val dataName = resources.getStringArray(R.array.data_name)
-        val dataDescription = resources.getStringArray(R.array.data_description)
+        val dataTemperature = resources.getStringArray(R.array.data_temperature)
+        val dataHumidity = resources.getStringArray(R.array.data_humidity)
+        val dataStatus = resources.getStringArray(R.array.data_status)
         val listMyData = ArrayList<MyData>()
         for (position in dataName.indices) {
             val myData = MyData(
                 dataName[position],
-                dataDescription[position]
+                dataTemperature[position],
+                dataHumidity[position],
+                dataStatus[position]
             )
             listMyData.add(myData)
         }

@@ -25,11 +25,23 @@
         <item>RAK 3</item>
         <item>RAK 4</item>
     </string-array>
-    <string-array name="data_description">
-        <item>RAK 1 ini</item>
-        <item>RAK 2 ini</item>
-        <item>RAK 3 ini</item>
-        <item>RAK 4 ini</item>
+    <string-array name="data_temperature">
+        <item>24°C</item>
+        <item>30°C</item>
+        <item>99°C</item>
+        <item>1337°C</item>
+    </string-array>
+    <string-array name="data_humidity">
+        <item>40%</item>
+        <item>50%</item>
+        <item>60%</item>
+        <item>70%</item>
+    </string-array>
+    <string-array name="data_status">
+        <item>ON</item>
+        <item>OFF</item>
+        <item>ON</item>
+        <item>OFF</item>
     </string-array>
 
 </resources>

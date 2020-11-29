@@ -6,5 +6,7 @@ import kotlinx.android.parcel.Parcelize
 @Parcelize
 data class MyData(
     var name: String,
-    var description: String
+    var temperature: String,
+    var humidity: String,
+    var status: String
 ) : Parcelable
