@@ -14,6 +14,10 @@
     <string name="button_exit">X</string>
     <string name="Save">Save</string>
     <string name="button_AddUser">Add User</string>
+    <string name="today_kwh_title">Today\'s kWH</string>
+    <string name="today_bill_title">Today\'s Bill</string>
+    <string name="today_kwh_placeholder">932 kW</string>
+    <string name="today_bill_placeholder">2.800.000</string>
 
     <string-array name="data_name">
         <item>RAK 1</item>
