@@ -3,6 +3,7 @@ package com.yangPentingLulus.DCEMS
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.yangPentingLulus.DCEMS.activities.MapsActivity
 import kotlinx.android.synthetic.main.activity_add_user.*
 import kotlinx.android.synthetic.main.activity_config.*
 
@@ -21,6 +22,10 @@ class ConfigActivity : AppCompatActivity() {
         }
         btnAddUser.setOnClickListener{
             val moveWithDataIntent = Intent(this@ConfigActivity, AddUserActivity::class.java)
+            startActivity(moveWithDataIntent)
+        }
+        btnMaps.setOnClickListener{
+            val moveWithDataIntent = Intent(this@ConfigActivity, MapsActivity::class.java)
             startActivity(moveWithDataIntent)
         }
     }
