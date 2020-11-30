@@ -3,6 +3,8 @@ package com.yangPentingLulus.DCEMS
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
+import android.widget.Toast
 import com.yangPentingLulus.DCEMS.activities.MapsActivity
 import kotlinx.android.synthetic.main.activity_add_user.*
 import kotlinx.android.synthetic.main.activity_config.*
