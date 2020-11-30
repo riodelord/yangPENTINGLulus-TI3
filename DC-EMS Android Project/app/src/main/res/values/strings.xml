@@ -45,5 +45,6 @@
         <item>ON</item>
         <item>OFF</item>
     </string-array>
+    <string name="title_activity_maps">Map</string>
 
 </resources>
