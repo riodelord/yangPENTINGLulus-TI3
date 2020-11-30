@@ -17,19 +17,19 @@ class AddUserActivity : AppCompatActivity() {
             Toast.makeText(applicationContext,msg, Toast. LENGTH_SHORT).show()
         }
         btnAdd.setOnClickListener{
-            val usernameUser = inputUsername.text.toString()
-            val emailUser = inputPassword.text.toString()
-            val passwordUser = inputEmail.text.toString()
+            val usernameUser = adduser_username_field.editText?.text.toString()
+            val emailUser = adduser_email_field.editText?.text.toString()
+            val passwordUser = adduser_password_field.editText?.text.toString()
             if (usernameUser.isEmpty()) {
-                inputUsername.error = "Username Tidak Boleh Kosong"
+                adduser_username_field.error = "Username Tidak Boleh Kosong"
                 return@setOnClickListener
             }
             if (emailUser.isEmpty()) {
-                inputEmail.error = "Email Tidak Boleh Kosong"
+                adduser_email_field.error = "Email Tidak Boleh Kosong"
                 return@setOnClickListener
             }
             if (passwordUser.isEmpty()) {
-                inputPassword.error = "Password Tidak Boleh Kosong"
+                adduser_password_field.error = "Password Tidak Boleh Kosong"
                 return@setOnClickListener
             }
             if(usernameUser=="admin" && emailUser=="admin@gmail.com") {
