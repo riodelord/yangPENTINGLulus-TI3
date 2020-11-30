@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_marginHorizontal="24dp"
+    android:layout_width="match_parent"
+    android:gravity="center_vertical"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/export_start_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginHorizontal="24dp"
+        android:text="Start"
+        android:textAppearance="?attr/textAppearanceSubtitle1"
+        />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/export_start_field"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Start Date"
+        android:layout_marginTop="8dp"
+        android:layout_marginHorizontal="24dp"
+        app:startIconDrawable="@drawable/ic_baseline_calendar_today_24">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="date"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/export_end_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginHorizontal="24dp"
+        android:text="Start"
+        android:textAppearance="?attr/textAppearanceSubtitle1"
+        />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/export_end_field"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="End Date"
+        android:layout_marginTop="8dp"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginBottom="16dp"
+        app:startIconDrawable="@drawable/ic_baseline_calendar_today_24">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="date"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+</LinearLayout>

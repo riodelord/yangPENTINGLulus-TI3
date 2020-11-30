@@ -19,11 +19,18 @@ class CardViewMyDataAdapter(private val listMyDatas: ArrayList<MyData>) :
     override fun onBindViewHolder(holder: CardViewViewHolder, position: Int) {
         val myData = listMyDatas[position]
         holder.tvName.text = myData.name
+        holder.tvTemperature.text = myData.temperature
+        holder.tvHumidity.text = myData.humidity
+        holder.tvStatus.text = myData.status
     }
     override fun getItemCount(): Int {
         return listMyDatas.size
     }
     inner class CardViewViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         var tvName: TextView = itemView.findViewById(R.id.tv_item_name)
+        var tvTemperature: TextView = itemView.findViewById(R.id.tv_item_temperature)
+        var tvHumidity: TextView = itemView.findViewById(R.id.tv_item_humidity)
+        var tvStatus: TextView = itemView.findViewById(R.id.tv_item_status)
+
     }
 }

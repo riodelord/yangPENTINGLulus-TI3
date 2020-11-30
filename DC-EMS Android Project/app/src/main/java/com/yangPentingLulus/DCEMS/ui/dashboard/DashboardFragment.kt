@@ -1,19 +1,20 @@
 package com.yangPentingLulus.DCEMS.ui.dashboard
 
+import android.app.Activity
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
+import com.yangPentingLulus.DCEMS.ConfigActivity
 import com.yangPentingLulus.DCEMS.MyData
 import com.yangPentingLulus.DCEMS.R
 import com.yangPentingLulus.DCEMS.adapter.CardViewMyDataAdapter
 import kotlinx.android.synthetic.main.fragment_dashboard.*
+
 
 class DashboardFragment : Fragment() {
 
@@ -36,16 +37,29 @@ class DashboardFragment : Fragment() {
         dashboard_recyclerview.layoutManager = LinearLayoutManager(activity)
         list.addAll(getListMyDatas())
         dashboard_recyclerview.adapter = CardViewMyDataAdapter(list)
+
+        settingsBtn.setOnClickListener{
+            moveToSettingsActivity()
+        }
+    }
+    private fun moveToSettingsActivity() {
+        val i = Intent(activity, ConfigActivity::class.java)
+        startActivity(i)
+        (activity as Activity?)!!.overridePendingTransition(0, 0)
     }
 
     fun getListMyDatas(): ArrayList<MyData> {
         val dataName = resources.getStringArray(R.array.data_name)
-        val dataDescription = resources.getStringArray(R.array.data_description)
+        val dataTemperature = resources.getStringArray(R.array.data_temperature)
+        val dataHumidity = resources.getStringArray(R.array.data_humidity)
+        val dataStatus = resources.getStringArray(R.array.data_status)
         val listMyData = ArrayList<MyData>()
         for (position in dataName.indices) {
             val myData = MyData(
                 dataName[position],
-                dataDescription[position]
+                dataTemperature[position],
+                dataHumidity[position],
+                dataStatus[position]
             )
             listMyData.add(myData)
         }

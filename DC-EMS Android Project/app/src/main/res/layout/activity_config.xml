@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ConfigActivity">
+
+    <Button
+        android:id="@+id/btnBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:textColor="@color/greyscale"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="16dp"
+        android:text="@string/button_exit"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        style="@style/Widget.MaterialComponents.Button.TextButton" />
+
+    <TextView
+        android:id="@+id/config_title"
+        android:layout_width="wrap_content"
+        android:textColor="@android:color/black"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Threshold Configuration"
+        android:textStyle="bold"
+        android:textSize="32sp"
+        app:fontFamily="sans-serif"
+        app:layout_constraintTop_toBottomOf="@id/btnBack"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+    <LinearLayout
+        android:id="@+id/config_threshold_form"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/config_title"
+        android:layout_marginTop="48dp"
+        android:layout_marginHorizontal="24dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/warning_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Warning (°C)"
+            android:textAppearance="?attr/textAppearanceSubtitle1"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/config_warning_field"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="28"
+            android:layout_marginTop="8dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/critical_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Critical (°C)"
+            android:textAppearance="?attr/textAppearanceSubtitle1"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/config_critical_field"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="32"
+            android:layout_marginTop="8dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/config_threshold_form"
+        android:layout_marginTop="32dp"
+        android:layout_marginHorizontal="24dp"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:text="@string/Save" />
+
+        <Button
+            android:id="@+id/btnAddUser"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/button_AddUser"
+            android:textColor="@color/primaryDarkColor"
+            style="@style/Widget.MaterialComponents.Button.TextButton"/>
+
+        <Button
+            android:id="@+id/btnMaps"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Data Center Location"
+            android:textColor="@color/primaryDarkColor"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

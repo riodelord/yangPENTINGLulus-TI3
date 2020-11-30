@@ -5,22 +5,42 @@
     <string name="title_dashboard">Dashboard</string>
     <string name="title_utilities">Utilities</string>
     <string name="title_alarms">Alarms</string>
+    <string name="inputEmail">Input Email</string>
+    <string name="inputPassword">Input Password</string>
+    <string name="button_login">Log In</string>
+    <string name="inputUsername">username</string>
+    <string name="button_Cancel">Cancel</string>
+    <string name="button_Add">Add</string>
+    <string name="button_exit">X</string>
+    <string name="Save">Save</string>
+    <string name="button_AddUser">Add User</string>
     <string name="today_kwh_title">Today\'s kWH</string>
     <string name="today_bill_title">Today\'s Bill</string>
     <string name="today_kwh_placeholder">932 kW</string>
-    <string name="today_bill_placeholder">2.800.000</string>
+    <string name="today_bill_placeholder">Rp 2.8 JT</string>
+    <string name="historical_kwh_label">Past kWH Data</string>
+    <string name="export_button_desc">Export Data to Excel</string>
 
     <string-array name="data_name">
         <item>RAK 1</item>
         <item>RAK 2</item>
         <item>RAK 3</item>
-        <item>RAK 4</item>
     </string-array>
-    <string-array name="data_description">
-        <item>RAK 1 ini</item>
-        <item>RAK 2 ini</item>
-        <item>RAK 3 ini</item>
-        <item>RAK 4 ini</item>
+    <string-array name="data_temperature">
+        <item>24°C</item>
+        <item>21°C</item>
+        <item>22°C</item>
     </string-array>
+    <string-array name="data_humidity">
+        <item>40%</item>
+        <item>30%</item>
+        <item>32%</item>
+    </string-array>
+    <string-array name="data_status">
+        <item>ON</item>
+        <item>ON</item>
+        <item>ON</item>
+    </string-array>
+    <string name="title_activity_maps">Map</string>
 
 </resources>
