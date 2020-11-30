@@ -19,6 +19,7 @@
     <string name="today_kwh_placeholder">932 kW</string>
     <string name="today_bill_placeholder">Rp 2.8 JT</string>
     <string name="historical_kwh_label">Past kWH Data</string>
+    <string name="export_button_desc">Export Utilities Data to Excel</string>
 
     <string-array name="data_name">
         <item>RAK 1</item>
