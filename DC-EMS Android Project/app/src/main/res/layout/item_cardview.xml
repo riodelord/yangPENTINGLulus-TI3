@@ -62,7 +62,8 @@
                     android:layout_height="wrap_content"
                     android:textSize="20sp"
                     android:textStyle="bold"
-                    tools:text="mydata_temperature" />
+                    tools:text="mydata_temperature"
+                    android:layout_marginLeft="10dp"/>
 
             </LinearLayout>
 
