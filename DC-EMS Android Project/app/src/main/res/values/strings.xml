@@ -19,31 +19,28 @@
     <string name="today_kwh_placeholder">932 kW</string>
     <string name="today_bill_placeholder">Rp 2.8 JT</string>
     <string name="historical_kwh_label">Past kWH Data</string>
-    <string name="export_button_desc">Export Utilities Data to Excel</string>
+    <string name="export_button_desc">Export Data to Excel</string>
 
     <string-array name="data_name">
         <item>RAK 1</item>
         <item>RAK 2</item>
         <item>RAK 3</item>
-        <item>RAK 4</item>
     </string-array>
     <string-array name="data_temperature">
         <item>24°C</item>
-        <item>30°C</item>
-        <item>99°C</item>
-        <item>1337°C</item>
+        <item>21°C</item>
+        <item>22°C</item>
     </string-array>
     <string-array name="data_humidity">
         <item>40%</item>
-        <item>50%</item>
-        <item>60%</item>
-        <item>70%</item>
+        <item>30%</item>
+        <item>32%</item>
     </string-array>
     <string-array name="data_status">
         <item>ON</item>
-        <item>OFF</item>
         <item>ON</item>
-        <item>OFF</item>
+        <item>ON</item>
     </string-array>
+    <string name="title_activity_maps">Map</string>
 
 </resources>
