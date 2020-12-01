@@ -25,21 +25,25 @@
         <item>RAK 1</item>
         <item>RAK 2</item>
         <item>RAK 3</item>
+        <item>RAK 4</item>
     </string-array>
     <string-array name="data_temperature">
         <item>24°C</item>
         <item>21°C</item>
         <item>22°C</item>
+        <item>23°C</item>
     </string-array>
     <string-array name="data_humidity">
         <item>40%</item>
         <item>30%</item>
         <item>32%</item>
+        <item>35%</item>
     </string-array>
     <string-array name="data_status">
         <item>ON</item>
         <item>ON</item>
         <item>ON</item>
+        <item>OFF</item>
     </string-array>
     <string name="title_activity_maps">Map</string>
 
