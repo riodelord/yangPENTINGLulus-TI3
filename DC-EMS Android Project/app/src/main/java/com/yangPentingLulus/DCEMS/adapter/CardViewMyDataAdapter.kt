@@ -19,8 +19,8 @@ class CardViewMyDataAdapter(private val listMyDatas: ArrayList<MyData>) :
     override fun onBindViewHolder(holder: CardViewViewHolder, position: Int) {
         val myData = listMyDatas[position]
         holder.tvName.text = myData.name
-        holder.tvTemperature.text = myData.temperature
-        holder.tvHumidity.text = myData.humidity
+        holder.tvTemperature.text = myData.temperature.toString()
+        holder.tvHumidity.text = myData.humidity.toString()
         holder.tvStatus.text = myData.status
     }
     override fun getItemCount(): Int {

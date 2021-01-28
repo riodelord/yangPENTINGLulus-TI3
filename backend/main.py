@@ -23,11 +23,6 @@ def read_utilities(billing_id: int):
     prices, dates = get_utility(billing_id)
     return {"prices": prices, "dates": dates}
 
-@app.get('/alarms')
-def read_alarms()
-    rs = get_alarms()
-    return {"alarms"}
-
 @app.get("/items/{item_id}")
 def read_item(item_id: int, q: Optional[str] = None):
     return {"item_id": item_id, "q": q}
