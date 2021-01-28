@@ -17,9 +17,5 @@
         android:label="@string/title_utilities"
         tools:layout="@layout/fragment_utilities" />
 
-    <fragment
-        android:id="@+id/navigation_alarms"
-        android:name="com.yangPentingLulus.DCEMS.ui.alarms.AlarmsFragment"
-        android:label="@string/title_alarms"
-        tools:layout="@layout/fragment_alarms" />
+
 </navigation>
