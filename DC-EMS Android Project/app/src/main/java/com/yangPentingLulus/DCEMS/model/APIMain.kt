@@ -12,18 +12,29 @@ import retrofit2.Response
 class APIMain {
 
     private var apiInterface:APIInterface?=null
+    private var rack = ArrayList<Rack>()
+    var publickRack = MutableLiveData<MutableList<Rack>>()
+
+    fun updateRackData(response: Response<List<Rack>>) {
+        this.rack.add(response.body()!!.get(0))
+        publickRack.value = response.body()!!.toMutableList()
+    }
+
+    fun getRackData(): ArrayList<Rack> {
+        return this.rack
+    }
 
     init {
         apiInterface = APIClient.getAPIClient().create(APIInterface::class.java)
     }
 
-    fun fetchRackData(id: Int): LiveData<List<Rack>> {
-        val rack = MutableLiveData<List<Rack>>()
+    fun fetchRackData(id: Int){
+        var rack = ArrayList<Rack>()
 
         apiInterface?.fetchRackData(id)?.enqueue(object: Callback<List<Rack>>{
 
             override fun onFailure(call: Call<List<Rack>>, t: Throwable) {
-                rack.value = null
+                println("Failed to fetch data")
             }
 
             override fun onResponse(
@@ -33,14 +44,16 @@ class APIMain {
 
                 val res = response.body()
                 if (response.code() == 200 &&  res!=null){
-                    rack.value = res
+                    println("Got Response!!")
+                    println("Body $res")
+                    println("Data ${res.get(0)}")
+                    updateRackData(response)
+                    // data masih ada disini
                 }else{
-                    rack.value = null
+                    print("Response Code: ${response.code()}")
                 }
 
             }
         })
-
-        return rack
     }
 }

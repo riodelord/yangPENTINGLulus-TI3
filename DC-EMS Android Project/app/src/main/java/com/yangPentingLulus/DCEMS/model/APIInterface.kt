@@ -6,10 +6,9 @@ import com.yangPentingLulus.DCEMS.model.Rack
 
 interface APIInterface {
 
-    @FormUrlEncoded
     @GET("sensor/{id}")
     fun fetchRackData(
-        @Field("id") id: Int
+        @Path("id") id: Int
     ): Call<List<Rack>>
 
 }
