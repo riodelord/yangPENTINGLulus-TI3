@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 import com.yangPentingLulus.DCEMS.activities.MapsActivity
 import kotlinx.android.synthetic.main.activity_add_user.*
 import kotlinx.android.synthetic.main.activity_config.*
@@ -28,6 +30,11 @@ class ConfigActivity : AppCompatActivity() {
         }
         btnMaps.setOnClickListener{
             val moveWithDataIntent = Intent(this@ConfigActivity, MapsActivity::class.java)
+            startActivity(moveWithDataIntent)
+        }
+        btnSignOut.setOnClickListener{
+            Firebase.auth.signOut()
+            val moveWithDataIntent = Intent(this@ConfigActivity, SplashScreenActivity::class.java)
             startActivity(moveWithDataIntent)
         }
     }
