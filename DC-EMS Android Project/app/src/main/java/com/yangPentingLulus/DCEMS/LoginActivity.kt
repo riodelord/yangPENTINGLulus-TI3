@@ -5,11 +5,17 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 import kotlinx.android.synthetic.main.activity_login.*
 
 class LoginActivity : AppCompatActivity() {
+    private lateinit var auth: FirebaseAuth
     override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
+    super.onCreate(savedInstanceState)
+    auth = Firebase.auth
+
         setContentView(R.layout.activity_login)
         fun printState(msg: String){
             Log.d("ActivityState",msg)
@@ -29,14 +35,22 @@ class LoginActivity : AppCompatActivity() {
                 return@setOnClickListener
             }
 
-            if(emailUser=="admin@gmail.com" && passwordUser=="admin"){
-                val moveWithDataIntent = Intent(this@LoginActivity, MainActivity::class.java)
-                startActivity(moveWithDataIntent)
-            }
+            auth.signInWithEmailAndPassword(emailUser, passwordUser)
+                .addOnCompleteListener(this) { task ->
+                    if (task.isSuccessful) {
+                        // Sign in success, update UI with the signed-in user's information
+                        val moveWithDataIntent = Intent(this@LoginActivity, MainActivity::class.java)
+                        startActivity(moveWithDataIntent)
 
-            else{
-                printState("Email/Password yang dimasukan salah")
-            }
+                    } else {
+                        // If sign in fails, display a message to the user.
+                        Toast.makeText(baseContext, "Login Gagal",
+                            Toast.LENGTH_SHORT).show()
+
+                    }
+
+                }
+
         }
     }
 }

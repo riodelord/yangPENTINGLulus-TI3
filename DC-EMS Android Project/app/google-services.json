@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "146056578265",
+    "project_id": "dc-ems",
+    "storage_bucket": "dc-ems.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:146056578265:android:6b3f5bf29e4b6d1558eac8",
+        "android_client_info": {
+          "package_name": "com.yangPentingLulus.DCEMS"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "146056578265-g466ipfkf7lo98e6vgsa0ai3dc64425s.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCjkdQgty11tmn6BHA8xYrt3RQJ3ROht2A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "146056578265-g466ipfkf7lo98e6vgsa0ai3dc64425s.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
